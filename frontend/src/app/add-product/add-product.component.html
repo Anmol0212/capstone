@@ -1,0 +1,143 @@
+<div class="row container d-flex justify-content-center">
+
+    <div class="col-md-6 col-lg-4">
+    
+    
+    
+    
+        <h1>Add Product</h1>
+    
+    
+    
+    
+      <form #registerForm="ngForm" (ngSubmit)="addProduct(registerForm)" novalidate>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+          <mat-label>Product ID</mat-label>
+    
+          <input matInput ngModel name="productId" id="productId" placeholder="Product ID"  disabled>
+    
+         
+    
+      </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+            <mat-label>Brand</mat-label>
+    
+            <input matInput ngModel name="brand" id="brand" placeholder="Brand" required>
+    
+            <mat-error *ngIf="registerForm.controls['brand'].hasError('required')">Brand is required</mat-error>
+    
+    
+    
+    
+           
+    
+        </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+            <mat-label>Model Name</mat-label>
+    
+            <input matInput ngModel name="productName" id="productName" placeholder="Model Name" required>
+    
+            <mat-error *ngIf="registerForm.controls['productName'].hasError('required')">Model Name is required</mat-error>
+    
+    
+    
+    
+           
+    
+        </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+            <mat-label>Product Description</mat-label>
+    
+            <input matInput ngModel name="productDescription" id="productDescription" placeholder="Description" required>
+    
+            <mat-error *ngIf="registerForm.controls['productDescription'].hasError('required')">Description is required</mat-error>
+    
+    
+    
+    
+        </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+            <mat-label>Actual Price</mat-label>
+    
+            <input matInput ngModel name="productActualPrice" id="productActualPrice" placeholder="Actual Price" required>
+    
+            <mat-error *ngIf="registerForm.controls['productActualPrice'].hasError('required')">Actual Price is required</mat-error>
+    
+    
+    
+    
+        </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+            <mat-label>Offer Price</mat-label>
+    
+            <input type="text" matInput ngModel name="productDiscountedPrice" id="productDiscountedPrice" placeholder="Discounted Price" required>
+    
+            <mat-error *ngIf="registerForm.controls['productActualPrice'].hasError('required')">Discounted Price is required</mat-error>
+    
+    
+    
+    
+        </mat-form-field>
+    
+    
+    
+    
+        <mat-form-field appearance="outline" class="w-100">
+    
+          <mat-label>Image Link</mat-label>
+    
+          <input type="text" matInput ngModel name="imageURL" id="imageURL" placeholder="Image URL" required>
+    
+          <mat-error *ngIf="registerForm.controls['imageURL'].hasError('required')">Image URL is required</mat-error>
+    
+    
+    
+    
+      </mat-form-field>
+    
+    
+    
+    
+        <div class="text-center">
+    
+            <button type="submit" mat-raised-button color="primary" [disabled]="!registerForm.valid">Add Product</button>
+    
+        </div>
+    
+    </form>
+    
+              </div>
+    
+               </div>
+    
+               
